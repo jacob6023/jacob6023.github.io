@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Jeong | Experience</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">JJ</a>
+        <div class="nav-links">
+            <a href="index.html">About</a>
+            <a href="experience.html" class="active">Experience</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="content">
+            <div class="content-wrapper">
+                <h1>Professional Experience</h1>
+                <p>Learn about my experiences!</p>
+                <div class="action-buttons">
+                    <button onclick="openModal('blueRibbonModal')">Programming Instructor</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal -->
+    <div id="blueRibbonModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('blueRibbonModal')">&times;</span>
+            <h2>Blue Ribbon Academy</h2>
+            <div class="modal-body">
+                <h3>Role Overview</h3>
+                <p>Teaching and Development Position focused on web development and programming fundamentals.</p>
+                
+                <h3>Key Achievements</h3>
+                <ul>
+                    <li>Taught web development using JavaScript, programming logic, and Python basics</li>
+                    <li>Tutored 200+ hours for academic high school students</li>
+                    <li>Improved student grades by 15 percent through dedicated instruction</li>
+                    <li>Implemented forgot password functionality on the company website</li>
+                </ul>
+
+                <h3>Technical Contributions</h3>
+                <p>Enhanced website security and user experience by developing password recovery system using:</p>
+                <ul>
+                    <li>API integration for automated email notifications</li>
+                    <li>Secure token generation for password reset verification</li>
+                    <li>User-friendly interface for password recovery process</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Jacob Jeong</p>
+    </footer>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "flex";
+            document.body.style.overflow = "hidden";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = "none";
+                document.body.style.overflow = "auto";
+            }
+        }
+    </script>
+</body>
+</html>
